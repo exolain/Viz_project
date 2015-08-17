@@ -1,0 +1,9 @@
+Hierarchical Cluster(
+	Y( :normalize U, :Name( "normalize not-U" ) ),
+	Label( :Country ),
+	Method( "Ward" ),
+	Standardize( 1 ),
+	Dendrogram Scale( "Distance Scale" ),
+	Number of Clusters( 5 ),
+	SendToReport( Dispatch( {}, "Dendrogram", OutlineBox, {SetHorizontal( 1 )} ) )
+)
