@@ -9,24 +9,24 @@
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
          ['Country', 'Graduate', 'Non-Graduate'],
-['Philippines','82','116'],
-['India','53','47'],
-['Germany', '45', '92'],
-['China','41','34'],
-['Canada','40','81'],
-['Taiwan','39','12'],
-['England','36','54'],
-['Mexico', '35', '608'],
-['South Africa', '31','49'],
-['Japan', '27', '35'],
-['Iran', '26', '17']
+['Philippines',82,116],
+['India',53,47],
+['Germany', 45, 92],
+['China',41,34],
+['Canada',40,81],
+['Taiwan',39,12],
+['England',36,54],
+['Mexico', 35, 608],
+['South Africa', 31,49],
+['Japan', 27, 35],
+['Iran', 26, 17]
 
       ]);
 
     var options = {
-      title : 'Monthly Coffee Production by Country',
-      vAxis: {title: 'Cups'},
-      hAxis: {title: 'Month'},
+      title : 'Graduates vs Non-Graduate per country',
+      vAxis: {title: 'Amount of people'},
+      hAxis: {title: 'Country'},
       seriesType: 'bars',
       series: {5: {type: 'line'}}
     };
