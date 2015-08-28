@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Country', 'Graduate', 'Non-Graduate'],
+['Philippines',82,116],
+['India',53,47],
+['Germany', 45, 92],
+['China',41,34],
+['Canada',40,81],
+['Taiwan',39,12],
+['England',36,54],
+['Mexico', 35, 608],
+['South Africa', 31,49],
+['Japan', 27, 35],
+['Iran', 26, 17]
+
+      ]);
+
+    var options = {
+      title : 'Graduates vs Non-Graduate per country',
+      vAxis: {title: 'Amount of people'},
+      hAxis: {title: 'Country'},
+      seriesType: 'bars',
+      series: {5: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
